@@ -4,6 +4,7 @@ import datetime
 import time
 
 
+
 if __name__ == '__main__':
     # 获取当前时间
     d1 = datetime.datetime.now()
@@ -29,5 +30,6 @@ if __name__ == '__main__':
     print('hour:%s' % d4.time().hour)
     print('minute:%s' % d4.time().minute)
     print('second:%s' % d4.time().second)
+
 
 

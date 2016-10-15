@@ -35,7 +35,7 @@ def insertsql():
 
     cursor.close()
     cnx.close()
-def selectsql:
+def selectsql():
     # 查询数据库
     try:
         cnx = mysql.connector.connect(user='root', password='',
