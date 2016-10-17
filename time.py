@@ -4,6 +4,10 @@ import datetime
 import time
 
 
+class Dog:
+    def __init__(self):
+        pass
+
 
 if __name__ == '__main__':
     # 获取当前时间
