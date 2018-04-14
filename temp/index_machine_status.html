@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-------------------------------------------------------------------------><!-- Copyright (C) 2011 KYOCERA MITA Corporation.                        --><!-- All rights reserved.                                                --><!-------------------------------------------------------------------------><html xmlns="http://www.w3.org/1999/xhtml" id="ccrx-root" dir="ltr"><head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>P001_Hme_DvcSts</title>
+<link rel="stylesheet" href="../css/mainBase.css" />
+<link rel="stylesheet" href="../css/common.css" />
+<script src="../js/lib/knockout-2.3.0.js"></script>
+<script src="/strings/opt1/opt1.js" data-bind="attr: { src: languageStringsUrl }"></script>
+<script src="../js/jssrc/base.js"></script>
+<!--<script src="../js/jssrc/model/startwlm/Hme_DvcSts.model.htm"></script>-->
+<script src="../js/jssrc/model/startwlm/Hme_DvcSts.model.htm"></script>
+</head>
+<body id="devicepage" data-bind="visible: allVisible" style="">
+<form>
+<div id="outerdiv" data-bind="attr: { id: divId() }">
+<div data-bind="attr: { 'class': divClassName() }" class="style748">
+<table id="headerrad" width="100%" border="0" cellspacing="0">
+<tbody><tr valign="middle" height="33px">
+<td colspan="11" id="headerrad" data-bind="html: ' ' + ' ' + mes()[42] + ' '">  设备状态 </td>
+</tr>
+<tr height="5px">
+<td></td>
+</tr>
+</tbody></table>
+<table id="contentrow" width="100%" height="25%" border="0" cellspacing="0">
+<tbody><tr height="5px" valign="center">
+<td width="1%" rowspan="15"></td>
+<td id="fontset" colspan="2">
+  <!--
+--><font class="style198" data-bind="text: mes()[43]">设备</font>
+</td>
+<td id="fontset" colspan="2">
+  <!--
+--><font class="style198" data-bind="text: mes()[44]">状态</font>
+</td>
+<td></td>
+<td width="1%" rowspan="15" data-bind="attr: { width: tdWidth() }"></td>
+</tr>
+<tr width="100%" height="5px">
+<td colspan="4">
+<div id="line"></div>
+</td>
+</tr>
+<!-- ko foreach: dataRows -->
+<tr height="45px" valign="middle" data-bind="attr: { bgcolor: $data.trBgColor}" bgcolor="#d8d8d8">
+<!-- ko if: $data.dvColor != '&nbsp;' -->
+<td width="10%" valign="middle" id="imgcommon">
+  <!--
+--><img align="center" border="0" data-bind="attr: { src: '../images/' + $data.dvColor }" src="../images/dev_printer.png" /><!--
+--></td>
+<!-- /ko -->
+<!-- ko if: $data.dvColor == '&nbsp;' --><!-- /ko -->
+<td width="40%" valign="middle" data-bind="text: $data.sLabel">打印机</td>
+<!-- ko if: $data.stColor != '&nbsp;' -->
+<td width="10%" valign="middle" id="imgcommon">
+  <!--
+--><img align="center" border="0" data-bind="attr: { src: '../images/' + $data.stColor }" src="../images/statusgreen.png" /><!--
+--></td>
+<!-- /ko -->
+<!-- ko if: $data.stColor == '&nbsp;' --><!-- /ko -->
+<td valign="middle" colspan="1" data-bind="attr: { width: $data.tdWidth }, text: $data.status" width="46%">睡眠中…</td>
+</tr>
+<tr height="1%">
+<td colspan="5"></td>
+</tr>
+<tr width="100%" height="5px">
+<td colspan="5" data-bind="attr: { 'class': $data.tdClassName }" class="style359">
+<div id="line"></div>
+</td>
+</tr>
+
+<tr height="45px" valign="middle" data-bind="attr: { bgcolor: $data.trBgColor}">
+<!-- ko if: $data.dvColor != '&nbsp;' -->
+<td width="10%" valign="middle" id="imgcommon">
+  <!--
+--><img align="center" border="0" data-bind="attr: { src: '../images/' + $data.dvColor }" src="../images/dev_scanner.png" /><!--
+--></td>
+<!-- /ko -->
+<!-- ko if: $data.dvColor == '&nbsp;' --><!-- /ko -->
+<td width="40%" valign="middle" data-bind="text: $data.sLabel">扫描仪</td>
+<!-- ko if: $data.stColor != '&nbsp;' -->
+<td width="10%" valign="middle" id="imgcommon">
+  <!--
+--><img align="center" border="0" data-bind="attr: { src: '../images/' + $data.stColor }" src="../images/statusgreen.png" /><!--
+--></td>
+<!-- /ko -->
+<!-- ko if: $data.stColor == '&nbsp;' --><!-- /ko -->
+<td valign="middle" colspan="1" data-bind="attr: { width: $data.tdWidth }, text: $data.status" width="46%">睡眠中…</td>
+</tr>
+<tr height="1%">
+<td colspan="5"></td>
+</tr>
+<tr width="100%" height="5px">
+<td colspan="5" data-bind="attr: { 'class': $data.tdClassName }" class="style359">
+<div id="line"></div>
+</td>
+</tr>
+
+<tr height="45px" valign="middle" data-bind="attr: { bgcolor: $data.trBgColor}" bgcolor="#d8d8d8">
+<!-- ko if: $data.dvColor != '&nbsp;' -->
+<td width="10%" valign="middle" id="imgcommon">
+  <!--
+--><img align="center" border="0" data-bind="attr: { src: '../images/' + $data.dvColor }" src="../images/StatusMess.png" /><!--
+--></td>
+<!-- /ko -->
+<!-- ko if: $data.dvColor == '&nbsp;' --><!-- /ko -->
+<td width="40%" valign="middle" data-bind="text: $data.sLabel">状态信息</td>
+<!-- ko if: $data.stColor != '&nbsp;' -->
+<td width="10%" valign="middle" id="imgcommon">
+  <!--
+--><img align="center" border="0" data-bind="attr: { src: '../images/' + $data.stColor }" src="../images/statusgreen.png" /><!--
+--></td>
+<!-- /ko -->
+<!-- ko if: $data.stColor == '&nbsp;' --><!-- /ko -->
+<td valign="middle" colspan="1" data-bind="attr: { width: $data.tdWidth }, text: $data.status" width="46%">睡眠中...</td>
+</tr>
+<tr height="1%">
+<td colspan="5"></td>
+</tr>
+<tr width="100%" height="5px">
+<td colspan="5" data-bind="attr: { 'class': $data.tdClassName }" class="style359">
+<div id="line"></div>
+</td>
+</tr>
+<!-- /ko -->
+</tbody></table>
+</div>
+</div>
+</form>
+<script src="../js/jssrc/view_model/startwlm/Hme_DvcSts.viewmodel.js"></script><script type="text/javascript" src="../strings/opt1/opt1.js"></script>
+
+
+</body></html>

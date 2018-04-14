@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-------------------------------------------------------------------------><!-- Copyright (C) 2011 KYOCERA MITA Corporation.                        --><!-- All rights reserved.                                                --><!-------------------------------------------------------------------------><html xmlns="http://www.w3.org/1999/xhtml" id="ccrx-root" dir="ltr"><head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>P119_DvcInfo_Counter_PaperSize</title>
+<link rel="stylesheet" href="../../css/mainBase.css" />
+<link rel="stylesheet" href="../../css/common.css" />
+<script src="../../js/lib/knockout-2.3.0.js"></script>
+<script src="/strings/opt1/opt1.js" data-bind="attr: { src: languageStringsUrl }"></script>
+<script src="../../js/jssrc/base.js"></script>
+<script src="../../js/jssrc/model/dvcinfo/dvccounter/DvcInfo_Counter_PaperSize.model.htm"></script>
+</head>
+<body id="custom" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" data-bind="visible: allVisible" style="">
+<!-- ko if: colorOrMono === 'color' -->
+<div data-bind="attr: { id: getDivId() }" id="outerdiv">
+<table id="headerrad" cellspacing="0" cellpading="0">
+<tbody><tr height="35px">
+<td id="headerrad" align="left" width="175px" data-bind="text: '  ' + mes()[2055]">  打印的页面</td>
+</tr>
+</tbody></table>
+<table id="contentrow" height="25%" cellspacing="0" cellpading="0">
+<tbody><tr height="35px">
+<td class="style434" rowspan="50">
+</td><td colspan="5" class="style356">
+<!-- ko text: mes()[62] -->类型<!-- /ko --><!--
+--> :    <select name="addrType" id="addrType" class="style711" data-bind="value: typeValue, event: {change: favBrowser}, options: getPrintedPagesType(), optionsText: 'text', optionsValue: 'value'"><option value="1">按功能打印的页面</option><option value="2">按纸张尺寸打印的页面</option><option value="3"></option></select>
+</td>
+<td class="style828">
+</td></tr>
+<tr id="trLine585px">
+<td id="tdAlignLeft" colspan="7">
+<div id="line" width="545px"></div>
+</td>
+<td id="tdWidth20px"></td>
+</tr>
+<tr height="30px">
+
+<td width="120px" class="style356" align="left"><font id="setFont" data-bind="text: mes()[544]">纸张尺寸</font></td>
+<td width="120px" class="style828" align="left"><font id="setFont" data-bind="text: mes()[445]">黑白</font></td>
+<td width="110px" class="style828" align="left"><font id="setFont" data-bind="text: mes()[447]">单色</font></td>
+<td width="110px" class="style828" align="left"><font id="setFont" data-bind="text: mes()[444]">全色</font></td>
+<td width="110px" class="style828" align="left"><font id="setFont" data-bind="text: mes()[2056]">总计数</font></td>
+
+<td class="style828"></td>
+</tr>
+<tr id="trLine585px">
+<td id="tdAlignLeft" colspan="7">
+<div id="line" width="545px"></div>
+</td>
+<td id="tdWidth20px"></td>
+</tr>
+
+<tr height="30px" valign="middle" bgcolor="#d8d8d8">
+<td class="style356" align="left" data-bind="text: mes()[78]">A3</td>
+<td class="style363" align="left" data-bind="text: counterBlackWhite[11]">0</td>
+<td class="style363" align="left" data-bind="text: counterSingleColor[11]">0</td>
+<td class="style363" align="left" data-bind="text: counterFullColor[11]">138</td>
+<td class="style363" align="left" data-bind="text: counterTotal[11]">138</td>
+<td class="style828"></td>
+</tr>
+<tr id="trLine585px">
+<td id="tdAlignLeft" colspan="7">
+<div id="line" width="545px"></div>
+</td>
+<td id="tdWidth20px"></td>
+</tr>
+
+<tr height="30px" valign="middle">
+<td class="style356" align="left" data-bind="text: mes()[82]">B4</td>
+<td class="style363" align="left" data-bind="text: counterBlackWhite[12]">0</td>
+<td class="style363" align="left" data-bind="text: counterSingleColor[12]">0</td>
+<td class="style363" align="left" data-bind="text: counterFullColor[12]">0</td>
+<td class="style363" align="left" data-bind="text: counterTotal[12]">0</td>
+<td class="style828"></td>
+</tr>
+<tr id="trLine585px">
+<td id="tdAlignLeft" colspan="7">
+<div id="line" width="545px"></div>
+</td>
+<td id="tdWidth20px"></td>
+</tr>
+
+<tr height="30px" valign="middle" bgcolor="#d8d8d8">
+<td class="style356" align="left" data-bind="text: mes()[79]">A4</td>
+<td class="style363" align="left" data-bind="text: counterBlackWhite[0]">25</td>
+<td class="style363" align="left" data-bind="text: counterSingleColor[0]">0</td>
+<td class="style363" align="left" data-bind="text: counterFullColor[0]">1378</td>
+<td class="style363" align="left" data-bind="text: counterTotal[0]">1403</td>
+<td class="style828"></td>
+</tr>
+<tr id="trLine585px">
+<td id="tdAlignLeft" colspan="7">
+<div id="line" width="545px"></div>
+</td>
+<td id="tdWidth20px"></td>
+</tr>
+
+<tr height="30px" valign="middle">
+<td class="style356" align="left" data-bind="text: mes()[83]">B5</td>
+<td class="style363" align="left" data-bind="text: counterBlackWhite[1]">0</td>
+<td class="style363" align="left" data-bind="text: counterSingleColor[1]">0</td>
+<td class="style363" align="left" data-bind="text: counterFullColor[1]">0</td>
+<td class="style363" align="left" data-bind="text: counterTotal[1]">0</td>
+<td class="style828"></td>
+</tr>
+<tr id="trLine585px">
+<td id="tdAlignLeft" colspan="7">
+<div id="line" width="545px"></div>
+</td>
+<td id="tdWidth20px"></td>
+</tr>
+
+<tr height="30px" valign="middle" bgcolor="#d8d8d8">
+<td class="style356" align="left" data-bind="text: mes()[80]">A5</td>
+<td class="style363" align="left" data-bind="text: counterBlackWhite[2]">0</td>
+<td class="style363" align="left" data-bind="text: counterSingleColor[2]">0</td>
+<td class="style363" align="left" data-bind="text: counterFullColor[2]">0</td>
+<td class="style363" align="left" data-bind="text: counterTotal[2]">0</td>
+<td class="style828"></td>
+</tr>
+<tr id="trLine585px">
+<td id="tdAlignLeft" colspan="7">
+<div id="line" width="545px"></div>
+</td>
+<td id="tdWidth20px"></td>
+</tr>
+
+<tr height="30px" valign="middle">
+<td class="style356" align="left" data-bind="text: mes()[85]">Folio</td>
+<td class="style363" align="left" data-bind="text: counterBlackWhite[3]">0</td>
+<td class="style363" align="left" data-bind="text: counterSingleColor[3]">0</td>
+<td class="style363" align="left" data-bind="text: counterFullColor[3]">0</td>
+<td class="style363" align="left" data-bind="text: counterTotal[3]">0</td>
+<td class="style828"></td>
+</tr>
+<tr id="trLine585px">
+<td id="tdAlignLeft" colspan="7">
+<div id="line" width="545px"></div>
+</td>
+<td id="tdWidth20px"></td>
+</tr>
+
+<tr height="30px" valign="middle" bgcolor="#d8d8d8">
+<td class="style356" align="left" data-bind="text: mes()[87]">Ledger</td>
+<td class="style363" align="left" data-bind="text: counterBlackWhite[13]">0</td>
+<td class="style363" align="left" data-bind="text: counterSingleColor[13]">0</td>
+<td class="style363" align="left" data-bind="text: counterFullColor[13]">0</td>
+<td class="style363" align="left" data-bind="text: counterTotal[13]">0</td>
+<td class="style828"></td>
+</tr>
+<tr id="trLine585px">
+<td id="tdAlignLeft" colspan="7">
+<div id="line" width="545px"></div>
+</td>
+<td id="tdWidth20px"></td>
+</tr>
+
+<tr height="30px" valign="middle">
+<td class="style356" align="left" data-bind="text: mes()[89]">Legal</td>
+<td class="style363" align="left" data-bind="text: counterBlackWhite[4]">0</td>
+<td class="style363" align="left" data-bind="text: counterSingleColor[4]">0</td>
+<td class="style363" align="left" data-bind="text: counterFullColor[4]">0</td>
+<td class="style363" align="left" data-bind="text: counterTotal[4]">0</td>
+<td class="style828"></td>
+</tr>
+<tr id="trLine585px">
+<td id="tdAlignLeft" colspan="7">
+<div id="line" width="545px"></div>
+</td>
+<td id="tdWidth20px"></td>
+</tr>
+
+<tr height="30px" valign="middle" bgcolor="#d8d8d8">
+<td class="style356" align="left" data-bind="text: mes()[88]">Letter</td>
+<td class="style363" align="left" data-bind="text: counterBlackWhite[5]">0</td>
+<td class="style363" align="left" data-bind="text: counterSingleColor[5]">0</td>
+<td class="style363" align="left" data-bind="text: counterFullColor[5]">0</td>
+<td class="style363" align="left" data-bind="text: counterTotal[5]">0</td>
+<td class="style828"></td>
+</tr>
+<tr id="trLine585px">
+<td id="tdAlignLeft" colspan="7">
+<div id="line" width="545px"></div>
+</td>
+<td id="tdWidth20px"></td>
+</tr>
+
+<tr height="30px" valign="middle">
+<td class="style356" align="left" data-bind="text: mes()[90]">Statement</td>
+<td class="style363" align="left" data-bind="text: counterBlackWhite[6]">0</td>
+<td class="style363" align="left" data-bind="text: counterSingleColor[6]">0</td>
+<td class="style363" align="left" data-bind="text: counterFullColor[6]">0</td>
+<td class="style363" align="left" data-bind="text: counterTotal[6]">0</td>
+<td class="style828"></td>
+</tr>
+<tr id="trLine585px">
+<td id="tdAlignLeft" colspan="7">
+<div id="line" width="545px"></div>
+</td>
+<td id="tdWidth20px"></td>
+</tr>
+<!-- ko if: mfpModel !== '_Tomcat2_Model_' -->
+<tr height="30px" valign="middle" bgcolor="#d8d8d8">
+<td class="style356" align="left" data-bind="text: mes()[2060]">横幅 1</td>
+<td class="style363" align="left" data-bind="text: counterBlackWhite[7]">0</td>
+<td class="style363" align="left" data-bind="text: counterSingleColor[7]">-------</td>
+<td class="style363" align="left" data-bind="text: counterFullColor[7]">0</td>
+<td class="style363" align="left" data-bind="text: counterTotal[7]">0</td>
+<td class="style828"></td>
+</tr>
+<tr id="trLine585px">
+<td id="tdAlignLeft" colspan="7">
+<div id="line" width="545px"></div>
+</td>
+<td id="tdWidth20px"></td>
+</tr>
+
+<tr height="30px" valign="middle">
+<td class="style356" align="left" data-bind="text: mes()[2061]">横幅 2</td>
+<td class="style363" align="left" data-bind="text: counterBlackWhite[8]">0</td>
+<td class="style363" align="left" data-bind="text: counterSingleColor[8]">-------</td>
+<td class="style363" align="left" data-bind="text: counterFullColor[8]">0</td>
+<td class="style363" align="left" data-bind="text: counterTotal[8]">0</td>
+<td class="style828"></td>
+</tr>
+<tr id="trLine585px">
+<td id="tdAlignLeft" colspan="7">
+<div id="line" width="545px"></div>
+</td>
+<td id="tdWidth20px"></td>
+</tr>
+<!-- /ko -->
+<tr height="30px" valign="middle" bgcolor="#d8d8d8">
+<td class="style356" align="left" data-bind="text: mes()[2143]">其他 (单)</td>
+<td class="style363" align="left" data-bind="text: counterBlackWhite[9]">0</td>
+<td class="style363" align="left" data-bind="text: counterSingleColor[9]">0</td>
+<td class="style363" align="left" data-bind="text: counterFullColor[9]">0</td>
+<td class="style363" align="left" data-bind="text: counterTotal[9]">0</td>
+<td class="style828"></td>
+</tr>
+<tr id="trLine585px">
+<td id="tdAlignLeft" colspan="7">
+<div id="line" width="545px"></div>
+</td>
+<td id="tdWidth20px"></td>
+</tr>
+
+<tr height="30px" valign="middle">
+<td class="style356" align="left" data-bind="text: mes()[2062]">其他 (双)</td>
+<td class="style363" align="left" data-bind="text: counterBlackWhite[10]">0</td>
+<td class="style363" align="left" data-bind="text: counterSingleColor[10]">0</td>
+<td class="style363" align="left" data-bind="text: counterFullColor[10]">8</td>
+<td class="style363" align="left" data-bind="text: counterTotal[10]">8</td>
+<td class="style828"></td>
+</tr>
+<tr id="trLine585px">
+<td id="tdAlignLeft" colspan="7">
+<div id="line" width="545px"></div>
+</td>
+<td id="tdWidth20px"></td>
+</tr>
+
+
+<tr height="10px"></tr>
+<tr height="10px">
+<td colspan="8"></td>
+</tr>
+</tbody></table>
+</div>
+<!-- /ko -->
+<!-- ko if: colorOrMono === 'mono' --><!-- /ko -->
+
+
+<script src="../../js/jssrc/view_model/dvcinfo/dvccounter/DvcInfo_Counter_PaperSize.viewmodel.js"></script><script type="text/javascript" src="../../strings/opt1/opt1.js"></script>
+
+
+</body></html>
